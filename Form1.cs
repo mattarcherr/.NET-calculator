@@ -16,5 +16,15 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Calculator_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

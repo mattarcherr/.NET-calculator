@@ -22,50 +22,45 @@ namespace Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0") textBox1.Clear();
+            if (EntryBox.Text == "0") EntryBox.Clear();
 
-            if (textBox1.Text.Contains(".") && ((Button)sender).Text == ".") { }
-            else textBox1.Text += ((Button)sender).Text;
+            if (EntryBox.Text.Contains(".") && ((Button)sender).Text == ".") { }
+            else EntryBox.Text += ((Button)sender).Text;
         }
         private void CE_Click(object sender, EventArgs e)
         {
             first_operand = "";
             chosen_operator = "";
-            textBox1.Text = "0";
-        }
-
-        private void Calculator_Load(object sender, EventArgs e)
-        {
-
+            EntryBox.Text = "0";
         }
 
         private void operator_Click(object sender, EventArgs e)
         {
             chosen_operator = ((Button)sender).Text;
-            first_operand = textBox1.Text;
-            textBox1.Clear();
+            first_operand = EntryBox.Text;
+            EntryBox.Clear();
         }
 
-        private void buttonEquals_Click(object sender, EventArgs e)
+        private void ButtonEquals_Click(object sender, EventArgs e)
         {
             Double result = 0;
             switch (chosen_operator)
             {
                 case "+":
-                    result = Double.Parse(first_operand) + Double.Parse(textBox1.Text);
+                    result = Double.Parse(first_operand) + Double.Parse(EntryBox.Text);
                     break;
                 case "-":
-                    result = Double.Parse(first_operand) - Double.Parse(textBox1.Text);
+                    result = Double.Parse(first_operand) - Double.Parse(EntryBox.Text);
                     break;
                 case "/":
-                    result = Double.Parse(first_operand) / Double.Parse(textBox1.Text);
+                    result = Double.Parse(first_operand) / Double.Parse(EntryBox.Text);
                     break;
                 case "*":
-                    result = Double.Parse(first_operand) * Double.Parse(textBox1.Text);
+                    result = Double.Parse(first_operand) * Double.Parse(EntryBox.Text);
                     break;
             }
 
-            textBox1.Text = result.ToString();
+            EntryBox.Text = result.ToString();
         }
     }
 }

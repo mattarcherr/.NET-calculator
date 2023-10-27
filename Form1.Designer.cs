@@ -49,7 +49,7 @@ namespace Calculator
             this.buttonPlusMinus = new System.Windows.Forms.Button();
             this.buttonPercentage = new System.Windows.Forms.Button();
             this.buttonBackspace = new System.Windows.Forms.Button();
-            this.buttonCLearAll = new System.Windows.Forms.Button();
+            this.buttonClearAll = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonInverse = new System.Windows.Forms.Button();
             this.buttonSquare = new System.Windows.Forms.Button();
@@ -66,6 +66,7 @@ namespace Calculator
             this.buttonZero.TabIndex = 21;
             this.buttonZero.Text = "0";
             this.buttonZero.UseVisualStyleBackColor = true;
+            this.buttonZero.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // buttonOne
             // 
@@ -76,6 +77,7 @@ namespace Calculator
             this.buttonOne.TabIndex = 26;
             this.buttonOne.Text = "1";
             this.buttonOne.UseVisualStyleBackColor = true;
+            this.buttonOne.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // buttonTwo
             // 
@@ -86,6 +88,7 @@ namespace Calculator
             this.buttonTwo.TabIndex = 25;
             this.buttonTwo.Text = "2";
             this.buttonTwo.UseVisualStyleBackColor = true;
+            this.buttonTwo.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // buttonThree
             // 
@@ -96,6 +99,7 @@ namespace Calculator
             this.buttonThree.TabIndex = 24;
             this.buttonThree.Text = "3";
             this.buttonThree.UseVisualStyleBackColor = true;
+            this.buttonThree.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // buttonFour
             // 
@@ -106,6 +110,7 @@ namespace Calculator
             this.buttonFour.TabIndex = 30;
             this.buttonFour.Text = "4";
             this.buttonFour.UseVisualStyleBackColor = true;
+            this.buttonFour.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // buttonFive
             // 
@@ -116,6 +121,7 @@ namespace Calculator
             this.buttonFive.TabIndex = 29;
             this.buttonFive.Text = "5";
             this.buttonFive.UseVisualStyleBackColor = true;
+            this.buttonFive.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // buttonSix
             // 
@@ -126,6 +132,7 @@ namespace Calculator
             this.buttonSix.TabIndex = 28;
             this.buttonSix.Text = "6";
             this.buttonSix.UseVisualStyleBackColor = true;
+            this.buttonSix.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // buttonSeven
             // 
@@ -136,6 +143,7 @@ namespace Calculator
             this.buttonSeven.TabIndex = 34;
             this.buttonSeven.Text = "7";
             this.buttonSeven.UseVisualStyleBackColor = true;
+            this.buttonSeven.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // buttonEight
             // 
@@ -146,6 +154,7 @@ namespace Calculator
             this.buttonEight.TabIndex = 33;
             this.buttonEight.Text = "8";
             this.buttonEight.UseVisualStyleBackColor = true;
+            this.buttonEight.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // buttonNine
             // 
@@ -156,6 +165,7 @@ namespace Calculator
             this.buttonNine.TabIndex = 32;
             this.buttonNine.Text = "9";
             this.buttonNine.UseVisualStyleBackColor = true;
+            this.buttonNine.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // buttonPlus
             // 
@@ -166,6 +176,7 @@ namespace Calculator
             this.buttonPlus.TabIndex = 23;
             this.buttonPlus.Text = "+";
             this.buttonPlus.UseVisualStyleBackColor = true;
+            this.buttonPlus.Click += new System.EventHandler(this.Operator_Click);
             // 
             // buttonMultiply
             // 
@@ -176,6 +187,7 @@ namespace Calculator
             this.buttonMultiply.TabIndex = 31;
             this.buttonMultiply.Text = "×";
             this.buttonMultiply.UseVisualStyleBackColor = true;
+            this.buttonMultiply.Click += new System.EventHandler(this.Operator_Click);
             // 
             // buttonMinus
             // 
@@ -186,6 +198,7 @@ namespace Calculator
             this.buttonMinus.TabIndex = 27;
             this.buttonMinus.Text = "−";
             this.buttonMinus.UseVisualStyleBackColor = true;
+            this.buttonMinus.Click += new System.EventHandler(this.Operator_Click);
             // 
             // buttonDivide
             // 
@@ -196,6 +209,7 @@ namespace Calculator
             this.buttonDivide.TabIndex = 35;
             this.buttonDivide.Text = "÷";
             this.buttonDivide.UseVisualStyleBackColor = true;
+            this.buttonDivide.Click += new System.EventHandler(this.Operator_Click);
             // 
             // buttonEquals
             // 
@@ -217,6 +231,7 @@ namespace Calculator
             this.buttonPoint.TabIndex = 20;
             this.buttonPoint.Text = ".";
             this.buttonPoint.UseVisualStyleBackColor = true;
+            this.buttonPoint.Click += new System.EventHandler(this.NumberButton_Click);
             // 
             // buttonPlusMinus
             // 
@@ -237,6 +252,7 @@ namespace Calculator
             this.buttonPercentage.TabIndex = 42;
             this.buttonPercentage.Text = "%";
             this.buttonPercentage.UseVisualStyleBackColor = true;
+            this.buttonPercentage.Click += new System.EventHandler(this.Operator_Click);
             // 
             // buttonBackspace
             // 
@@ -250,13 +266,14 @@ namespace Calculator
             // 
             // buttonCLearAll
             // 
-            this.buttonCLearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCLearAll.Location = new System.Drawing.Point(79, 121);
-            this.buttonCLearAll.Name = "buttonCLearAll";
-            this.buttonCLearAll.Size = new System.Drawing.Size(77, 54);
-            this.buttonCLearAll.TabIndex = 41;
-            this.buttonCLearAll.Text = "CE";
-            this.buttonCLearAll.UseVisualStyleBackColor = true;
+            this.buttonClearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClearAll.Location = new System.Drawing.Point(79, 121);
+            this.buttonClearAll.Name = "buttonCLearAll";
+            this.buttonClearAll.Size = new System.Drawing.Size(77, 54);
+            this.buttonClearAll.TabIndex = 41;
+            this.buttonClearAll.Text = "CE";
+            this.buttonClearAll.UseVisualStyleBackColor = true;
+            this.buttonClearAll.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // buttonClear
             // 
@@ -267,6 +284,7 @@ namespace Calculator
             this.buttonClear.TabIndex = 40;
             this.buttonClear.Text = "C";
             this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // buttonInverse
             // 
@@ -316,7 +334,7 @@ namespace Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(310, 442);
             this.Controls.Add(this.buttonPercentage);
-            this.Controls.Add(this.buttonCLearAll);
+            this.Controls.Add(this.buttonClearAll);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonBackspace);
             this.Controls.Add(this.buttonInverse);
@@ -370,7 +388,7 @@ namespace Calculator
         private System.Windows.Forms.Button buttonSix;
         private System.Windows.Forms.Button buttonMinus;
         private System.Windows.Forms.Button buttonPercentage;
-        private System.Windows.Forms.Button buttonCLearAll;
+        private System.Windows.Forms.Button buttonClearAll;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button buttonBackspace;
         private System.Windows.Forms.Button buttonInverse;

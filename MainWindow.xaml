@@ -29,7 +29,8 @@
                     Content="=" FontSize="36"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" Foreground="#FFEFEEEE" >
+                    Margin="1" Foreground="#FFEFEEEE"
+                    Click="EqualsButton_Click">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="#16639c"/>
@@ -65,7 +66,7 @@
                     Content="+" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1"  Click="OperatorButton_Click">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="#F9F9F9"/>
@@ -101,7 +102,7 @@
                     Content="−" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1"  Click="OperatorButton_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -137,7 +138,7 @@
                     Content="×" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1"  Click="OperatorButton_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -173,7 +174,7 @@
                     Content="÷" FontSize="36"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1"  Click="OperatorButton_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -245,7 +246,7 @@
                     Content="." FontSize="36"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="NumberButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -281,7 +282,7 @@
                     Content="3" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="NumberButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -317,7 +318,7 @@
                     Content="6" FontSize="30" 
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="NumberButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -353,7 +354,7 @@
                     Content="9" FontSize="30" 
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="NumberButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -425,7 +426,7 @@
                     Content="C" FontSize="20"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="ClearButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -461,7 +462,7 @@
                     Content="0" FontSize="30"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="NumberButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -497,7 +498,7 @@
                     Content="2" FontSize="30"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="NumberButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -533,7 +534,7 @@
                     Content="5" FontSize="30"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="NumberButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -577,7 +578,7 @@
                     Content="8" FontSize="30"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="NumberButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -649,7 +650,7 @@
                     Content="CE" FontSize="20"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="ClearButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -721,7 +722,7 @@
                     Content="1" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" Click="Button_Click" >
+                    Margin="1" Click="NumberButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -757,7 +758,7 @@
                     Content="4" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="NumberButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -793,7 +794,7 @@
                     Content="7" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="NumberButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -906,7 +907,7 @@
                 BorderThickness="1"
                 VerticalAlignment="Top" >
             <StackPanel>
-                <TextBlock x:Name="storedValueTextBlock" 
+                <TextBlock x:Name="operandValueTextBlock" 
                            Text="0" FontSize="28"
                            Margin="0,0,10,0"
                            HorizontalAlignment="right"

@@ -20,14 +20,84 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string operand = "";
+        private string second_operand = "";
+        private string chosen_operator = "";
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void NumberButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (inputValueTextBlock.Text == "0") inputValueTextBlock.Text = "";
+            if (operandValueTextBlock.Text.Contains("="))
+            {
+                inputValueTextBlock.Text = "";
+                operandValueTextBlock.Text = "";
+                operandValueTextBlock.Visibility = Visibility.Hidden;
+                second_operand = "";
+            }
+            inputValueTextBlock.Text += ((Button)sender).Content.ToString();
+        }
+        private void OperatorButton_Click(object sender, RoutedEventArgs e)
+        {
+            chosen_operator = ((Button)sender).Content.ToString();
+            operand = inputValueTextBlock.Text;
+            second_operand = "";
+            operandValueTextBlock.Text = inputValueTextBlock.Text + chosen_operator;
+            operandValueTextBlock.Visibility = Visibility.Visible;
+            inputValueTextBlock.Text = "0";
+        }
+        private void EqualsButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (inputValueTextBlock.Text == "0" || operand == "") return;
+            if (second_operand == "") second_operand = inputValueTextBlock.Text;
+            Double result = 0;
+            Double input = Double.Parse(second_operand);
+            switch (chosen_operator)
+            {
+                case "+":
+                    result = Double.Parse(operand) + input;
+                    break;
+                case "−":
+                    result = Double.Parse(operand) - input;
+                    break;
+                case "×":
+                    result = Double.Parse(operand) * input;
+                    break;
+                case "÷":
+                    result = Double.Parse(operand) / input;
+                    break;
+                case "%":
+                    result = input / 100;
+                    break;
+                case "1/X":
+                    result = 1 / input;
+                    break;
+                case "x²":
+                    result = input * input;
+                    break;
+                case "√X":
+                    result = Math.Sqrt(input);
+                    break;
+            }
+            operandValueTextBlock.Visibility = Visibility.Visible;
+            operandValueTextBlock.Text = operand + chosen_operator + second_operand + "=";
+            inputValueTextBlock.Text = result.ToString();
+            operand = inputValueTextBlock.Text;
+        }
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            inputValueTextBlock.Text = "0";
+            if (((Button)sender).Content.ToString() == "C")
+            {
+                operandValueTextBlock.Text = "";
+                operandValueTextBlock.Visibility = Visibility.Hidden;
+                operand = "";
+                second_operand = "";
+                chosen_operator = "";
+            }
         }
     }
 }

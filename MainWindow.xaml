@@ -24,11 +24,12 @@
                 <RowDefinition Height="54*"/>
                 <RowDefinition Height="54*"/>
             </Grid.RowDefinitions>
-            <Button Grid.Column="3" Grid.Row="5" 
+            <Button x:Name="equalsButton" 
+                    Grid.Column="3" Grid.Row="5" 
                     Content="=" FontSize="36"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Foreground="#FFEFEEEE" >
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="#16639c"/>
@@ -45,6 +46,9 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#1869a6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#FF186198"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
@@ -56,7 +60,8 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button Grid.Column="3" Grid.Row="4" 
+            <Button x:Name="addButton" 
+                    Grid.Column="3" Grid.Row="4" 
                     Content="+" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -77,6 +82,9 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
@@ -88,7 +96,8 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button Grid.Column="3" Grid.Row="3" 
+            <Button x:Name="minusButton" 
+                    Grid.Column="3" Grid.Row="3" 
                     Content="−" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -116,11 +125,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="3" Grid.Row="2" 
+            <Button x:Name="multiplyButton" 
+                    Grid.Column="3" Grid.Row="2" 
                     Content="×" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -148,11 +161,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="3" Grid.Row="1"
+            <Button x:Name="divideButton" 
+                    Grid.Column="3" Grid.Row="1"
                     Content="÷" FontSize="36"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -180,11 +197,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="3" Grid.Row="0"
+            <Button x:Name="backspaceButton" 
+                    Grid.Column="3" Grid.Row="0"
                     Content="⌫" FontSize="20" 
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -212,11 +233,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="2" Grid.Row="5"
+            <Button x:Name="pointButton" 
+                    Grid.Column="2" Grid.Row="5"
                     Content="." FontSize="36"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -244,11 +269,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="2" Grid.Row="4"
+            <Button x:Name="threeButton" 
+                    Grid.Column="2" Grid.Row="4"
                     Content="3" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -276,11 +305,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="2" Grid.Row="3" 
+            <Button x:Name="sixButton"
+                    Grid.Column="2" Grid.Row="3" 
                     Content="6" FontSize="30" 
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -308,11 +341,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="2" Grid.Row="2" 
+            <Button x:Name="nineButton" 
+                    Grid.Column="2" Grid.Row="2" 
                     Content="9" FontSize="30" 
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -340,11 +377,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="2" Grid.Row="1"
+            <Button x:Name="squareRootButton" 
+                    Grid.Column="2" Grid.Row="1"
                     Content="√X" FontSize="25" 
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -372,11 +413,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="2" Grid.Row="0" 
+            <Button x:Name="clearButton" 
+                    Grid.Column="2" Grid.Row="0" 
                     Content="C" FontSize="20"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -404,11 +449,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="1" Grid.Row="5"
+            <Button x:Name="zeroButton" 
+                    Grid.Column="1" Grid.Row="5"
                     Content="0" FontSize="30"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
@@ -436,11 +485,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="1" Grid.Row="4" 
+            <Button x:Name="twoButton" 
+                    Grid.Column="1" Grid.Row="4" 
                     Content="2" FontSize="30"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
@@ -468,11 +521,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="1" Grid.Row="3"
+            <Button x:Name="fiveButton"
+                    Grid.Column="1" Grid.Row="3"
                     Content="5" FontSize="30"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
@@ -508,11 +565,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="1" Grid.Row="2"
+            <Button x:Name="eightButton"
+                    Grid.Column="1" Grid.Row="2"
                     Content="8" FontSize="30"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
@@ -540,11 +601,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="1" Grid.Row="1" 
+            <Button x:Name="squareButton" 
+                    Grid.Column="1" Grid.Row="1" 
                     Content="x²" FontSize="25"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
@@ -572,11 +637,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="1" Grid.Row="0" 
+            <Button x:Name="clearEntryButton" 
+                    Grid.Column="1" Grid.Row="0" 
                     Content="CE" FontSize="20"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
@@ -604,11 +673,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="0" Grid.Row="5" 
+            <Button x:Name="plusMinusButton" 
+                    Grid.Column="0" Grid.Row="5" 
                     Content="±" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -636,15 +709,19 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="0" Grid.Row="4" 
+            <Button x:Name="oneButton"
+                    Grid.Column="0" Grid.Row="4" 
                     Content="1" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="Button_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -668,11 +745,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="0" Grid.Row="3" 
+            <Button x:Name="fourButton" 
+                    Grid.Column="0" Grid.Row="3" 
                     Content="4" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -684,14 +765,6 @@
                         <Setter Property="BorderBrush" Value="#CCCCCC"/>
                     </Style>
                 </Button.Resources>
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleX="1.054"/>
-                        <RotateTransform/>
-                        <TranslateTransform X="0.482"/>
-                    </TransformGroup>
-                </Button.RenderTransform>
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="#F9F9F9"/>
@@ -708,12 +781,16 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="0" Grid.Row="2" 
-                    Content="5" FontSize="30"
+            <Button x:Name="sevenButton" 
+                    Grid.Column="0" Grid.Row="2" 
+                    Content="7" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
                     Margin="1" >
@@ -740,11 +817,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="0" Grid.Row="1" 
+            <Button x:Name="inverseButton" 
+                    Grid.Column="0" Grid.Row="1" 
                     Content="1/X" FontSize="20"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -772,11 +853,15 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Grid.Column="0" Grid.Row="0" 
+            <Button x:Name="percentButton"
+                    Grid.Column="0" Grid.Row="0" 
                     Content="%" FontSize="20"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
@@ -804,6 +889,9 @@
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#F6F6F6"/>
                             </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#EFEFEF"/>
+                            </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
@@ -817,10 +905,17 @@
                 BorderBrush="black"
                 BorderThickness="1"
                 VerticalAlignment="Top" >
-            <!-- Stored Value -->
-            <TextBlock Text="0" Margin="5"
-                       HorizontalAlignment="right"
-                       FontSize="28"/>
+            <StackPanel>
+                <TextBlock x:Name="storedValueTextBlock" 
+                           Text="0" FontSize="28"
+                           Margin="0,0,10,0"
+                           HorizontalAlignment="right"
+                           Foreground="gray" Visibility="Hidden"/>
+                <TextBlock x:Name="inputValueTextBlock" 
+                           Text="0" FontSize="45"
+                           Margin="10,0,10,0"
+                           HorizontalAlignment="right"/>
+            </StackPanel>
         </Border>
     </Grid>
 </Window>

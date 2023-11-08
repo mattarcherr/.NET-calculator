@@ -210,7 +210,7 @@
                     Content="⌫" FontSize="20" 
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="BackspaceButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -907,15 +907,21 @@
                 BorderThickness="1"
                 VerticalAlignment="Top" >
             <StackPanel>
-                <TextBlock x:Name="operandValueTextBlock" 
-                           Text="0" FontSize="28"
-                           Margin="0,0,10,0"
-                           HorizontalAlignment="right"
-                           Foreground="gray" Visibility="Hidden"/>
-                <TextBlock x:Name="inputValueTextBlock" 
-                           Text="0" FontSize="45"
-                           Margin="10,0,10,0"
-                           HorizontalAlignment="right"/>
+                <Viewbox StretchDirection="DownOnly" HorizontalAlignment="right">
+                    <TextBlock x:Name="operandValueTextBlock" 
+                               Text="0" FontSize="28"
+                               Margin="0,0,10,0"
+                               HorizontalAlignment="right"
+                               Foreground="gray" Visibility="Hidden"/>
+                </Viewbox>
+                <Viewbox StretchDirection="DownOnly" HorizontalAlignment="right">
+                    <TextBlock x:Name="inputValueTextBlock"
+                               Text="0"
+                               FontSize="45"
+                               Margin="10,0,10,0"
+                               HorizontalAlignment="right"
+                               TextWrapping="Wrap"/>
+                </Viewbox>
             </StackPanel>
         </Border>
     </Grid>

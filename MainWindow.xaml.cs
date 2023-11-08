@@ -77,6 +77,7 @@ namespace Calculator
                     break;
                 case "x²":
                     result = input * input;
+
                     break;
                 case "√X":
                     result = Math.Sqrt(input);
@@ -97,6 +98,16 @@ namespace Calculator
                 operand = "";
                 second_operand = "";
                 chosen_operator = "";
+            }
+        }
+
+        private void BackspaceButton_Click(object sender, RoutedEventArgs e)
+        {
+            string input = inputValueTextBlock.Text;
+            if (input.Length == 1) { inputValueTextBlock.Text = "0"; return; }
+            else
+            {
+                inputValueTextBlock.Text = input.Remove(input.Length - 1);
             }
         }
     }

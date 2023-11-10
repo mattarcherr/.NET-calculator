@@ -390,7 +390,7 @@
                     Content="√X" FontSize="25" 
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="FunctionButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -614,7 +614,7 @@
                     Content="x²" FontSize="25"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="FunctionButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -686,7 +686,7 @@
                     Content="±" FontSize="30"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="FunctionButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -830,7 +830,7 @@
                     Content="1/X" FontSize="20"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="FunctionButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -866,7 +866,7 @@
                     Content="%" FontSize="20"
                     HorizontalAlignment="Stretch"  
                     VerticalAlignment="Stretch"
-                    Margin="1" >
+                    Margin="1" Click="FunctionButton_Click" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>

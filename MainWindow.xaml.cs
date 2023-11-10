@@ -69,19 +69,9 @@ namespace Calculator
                 case "÷":
                     result = Double.Parse(operand) / input;
                     break;
-                case "%":
-                    result = input / 100;
-                    break;
-                case "1/X":
-                    result = 1 / input;
-                    break;
-                case "x²":
-                    result = input * input;
-
-                    break;
-                case "√X":
-                    result = Math.Sqrt(input);
-                    break;
+                default:
+                    operandValueTextBlock.Text = operand + "=";
+                    return;
             }
             operandValueTextBlock.Visibility = Visibility.Visible;
             operandValueTextBlock.Text = operand + chosen_operator + second_operand + "=";
@@ -109,6 +99,55 @@ namespace Calculator
             {
                 inputValueTextBlock.Text = input.Remove(input.Length - 1);
             }
+        }
+
+        private void FunctionButton_Click(object sender, RoutedEventArgs e)
+        {
+            String inputStr = inputValueTextBlock.Text;
+            Double result = 0;
+
+            chosen_operator = ((Button)sender).Content.ToString();
+            operand = inputValueTextBlock.Text;
+            switch (chosen_operator)
+            {
+                case "%":
+                    operandValueTextBlock.Text = inputStr;
+                    break;
+                case "1/X":
+                    operandValueTextBlock.Text = "1/(" + inputStr + ")";
+                    break;
+                case "x²":
+                    operandValueTextBlock.Text = "Sqr(" + inputStr + ")";
+                    break;
+                case "√X":
+                    operandValueTextBlock.Text = "Sqrt(" + inputStr + ")";
+                    break;
+                case "±":
+                    operandValueTextBlock.Text = "Negate(" + inputStr + ")";
+                    break;
+            }
+            operandValueTextBlock.Visibility = Visibility.Visible;
+            Double input = Double.Parse(inputStr);
+            switch (chosen_operator)
+            {
+                case "%":
+                    result = input / 100;
+                    break;
+                case "1/X":
+                    result = 1 / input;
+                    break;
+                case "x²":
+                    result = input * input;
+                    break;
+                case "√X":
+                    result = Math.Sqrt(input);
+                    break;
+                case "±":
+                    result = -(input);
+                    break;
+            }
+            inputValueTextBlock.Text = result.ToString();
+            operand = inputValueTextBlock.Text;
         }
     }
 }
